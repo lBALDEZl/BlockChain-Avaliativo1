@@ -108,10 +108,10 @@ http://localhost:3000
 
 ## 🕹 6. Testando a DApp
 ✅ Funcionalidades:
--✔ Incrementar → Aumenta o contador no contrato.
--✔ Decrementar → Diminui o contador (não vai abaixo de 0).
--✔ Zerar → Reseta o contador para 0.
--✔ Exibe o dono do contrato → Mostra o nome definido no momento do deploy.
--✔ Pop-up de Parabéns → Exibido ao atingir um número pré-definido de incrementos.
+- .✔ Incrementar → Aumenta o contador no contrato.
+- .✔ Decrementar → Diminui o contador (não vai abaixo de 0).
+- .✔ Zerar → Reseta o contador para 0.
+- .✔ Exibe o dono do contrato → Mostra o nome definido no momento do deploy.
+- .✔ Pop-up de Parabéns → Exibido ao atingir um número pré-definido de incrementos.
 
 
