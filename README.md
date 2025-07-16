@@ -38,21 +38,26 @@ O Ganache exibirá:
 
 ⚠ Deixe o Ganache aberto o tempo todo durante os testes.
 
-🛠 3. Configurando e Implantando o Contrato
+🛠 3. Configurando e Implantando o Contrato 
 
-▶ 3.1. Instalar as dependências do projeto
+▶ 3.1. Instalar as dependências do projeto 
 
 No diretório principal do projeto:
 ```
 npm install
 ```
-▶ 3.2. Compilar o contrato
+▶ 3.2. Compilar o contrato 
 ```
 npx hardhat compile
 ```
 O Hardhat irá gerar os artefatos do contrato em:
 ```
 artifacts/contracts/Counter.sol/Counter.json
+```
+
+Copie os artefatos do contrado gerado para o diretório client/src:
+```
+cp artifacts/contracts/Counter.sol/Counter.json client/src/
 ```
 
 ▶ 3.3. Implantar o contrato na blockchain local
