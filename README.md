@@ -72,12 +72,19 @@ Abra o MetaMask no navegador.
 Clique no avatar (canto superior direito) → Configurações → Redes → Adicionar Rede Manualmente.
 
 Preencha os campos:
+
 Nome da Rede → Local Teste
+
 Nova URL RPC → http://127.0.0.1:8545
+
 Chain ID → 1337
+
 Moeda → ETH
+
 Importe uma conta do Ganache:
+
 Clique no avatar → Importar Conta.
+
 Cole uma das chaves privadas fornecidas pelo Ganache.
 
 ## 💻 5. Rodando o Front-End
