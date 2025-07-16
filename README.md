@@ -41,6 +41,7 @@ O Ganache exibirá:
 🛠 3. Configurando e Implantando o Contrato
 
 ▶ 3.1. Instalar as dependências do projeto
+
 No diretório principal do projeto:
 ```
 npm install
@@ -55,6 +56,7 @@ artifacts/contracts/Counter.sol/Counter.json
 ```
 
 ▶ 3.3. Implantar o contrato na blockchain local
+
 No diretório principal:
 ```
 npx hardhat run scripts/deploy.ts --network localhost
