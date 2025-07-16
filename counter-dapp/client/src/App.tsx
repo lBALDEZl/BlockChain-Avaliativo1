@@ -7,7 +7,7 @@ import "./App.css";
 const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
 
 // Substitua com o endereço gerado no deploy todas as vezes que reiniciar
-const contractAddress = "0xC3bC3F60F6e831AE7D6bC3E77ff53e656e5E65Da";
+const contractAddress = "0x0EA67fB038b9705abcA6754d18E723B536902546";
 
 // Contrato genérico (para evitar erro de tipagem)
 const contract = new ethers.Contract(contractAddress, CounterABI.abi, provider) as any;
@@ -40,18 +40,20 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (count === 5) {
+    if (count === 5 || count === 10 || count === 15) { // Números para Parabéns (mude se quiser){
       setShowPopup(true);
     } else {
       setShowPopup(false);
     }
   }, [count]);
 
+  
   const checkCongratulations = (newCount: number) => {
     if (newCount >= 10) { // Número para Parabéns (mude se quiser)
-      setMessage("🎉 Parabéns! Você atingiu 10 incrementos!");
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000); // Fecha após 3s
     } else {
-      setMessage("");
+      setMessage(""); 
     }
   };
 
@@ -63,9 +65,8 @@ const App: React.FC = () => {
     const newCount = await contractWithSigner.getCount();
     setCount(Number(newCount));
 
-    // Mensagem de parabéns ao chegar em 10
-   if (Number(newCount) === 5) {
-      // ✅ Muda 5 para o número que você quiser
+    // Mensagem de parabéns ao chegar no número específico
+   if (Number(newCount) === 5 || count === 10 || count === 15) {
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000); // Fecha após 3s
     }
@@ -104,7 +105,7 @@ const App: React.FC = () => {
 
       {showPopup && (
         <div className="popup">
-          🎉 Parabéns! Você atingiu 5 incrementos! 🎉
+          🎉 Parabéns! Você atingiu {count} incrementos! 🎉
         </div>
       )}
     </div>
